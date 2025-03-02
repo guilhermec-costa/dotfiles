@@ -63,9 +63,9 @@ return packer.startup(function(use)
     --use 'nvim-telescope/telescope-media-files.nvim'
     use 'mfussenegger/nvim-dap'
     use 'theHamsta/nvim-dap-virtual-text'
-    use {
-        "jay-babu/mason-nvim-dap.nvim",
-    }
+    --[[ use { ]]
+    --[[     "jay-babu/mason-nvim-dap.nvim", ]]
+    --[[ } ]]
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
     use 'mxsdev/nvim-dap-vscode-js'
     use {

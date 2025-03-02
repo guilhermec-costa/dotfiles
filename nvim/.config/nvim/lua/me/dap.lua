@@ -2,7 +2,7 @@ local dap = require("dap")
 local js_based_languages = { "typescript", "javascript", "typescriptreact", "cpp" }
 
 require("dap-vscode-js").setup({
-    node_path = "node",                                                                                                      -- Path of node executable. Defaults to $NODE_PATH, and then "node"
+    --[[ node_path = "node",                                                                                                      -- Path of node executable. Defaults to $NODE_PATH, and then "node" ]]
     debugger_path = vim.fn.expand("~/.local/share/nvim/site/pack/packer/opt/vscode-js-debug"),                               -- Path to vscode-js-debug installation
     -- debugger_cmd = { "extension" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
     adapters = { 'chrome', 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node', 'chrome' }, -- which adapters to register in nvim-dap
@@ -18,6 +18,31 @@ require("dap-vscode-js").setup({
     name = "lldb"
 } ]]
 
+
+
+---@param pkg string
+---@param path? string
+local function get_pkg_path(pkg, path)
+  pcall(require, 'mason')
+  local root = vim.env.MASON or (vim.fn.stdpath('data') .. '/mason')
+  path = path or ''
+  local ret = root .. '/packages/' .. pkg .. '/' .. path
+  return ret
+end
+
+require('dap').adapters['pwa-node'] = {
+  type = 'server',
+  host = 'localhost',
+  port = '${port}',
+  executable = {
+    command = 'node',
+    args = {
+      get_pkg_path('js-debug-adapter', '/js-debug/src/dapDebugServer.js'),
+      '${port}',
+    },
+  },
+}
+
 for _, language in ipairs(js_based_languages) do
     dap.configurations[language] = {
         {
@@ -29,10 +54,12 @@ for _, language in ipairs(js_based_languages) do
         },
         {
             type = "pwa-node",
+            host = "localhost",
             request = "attach",
             name = "Attach",
             processId = require('dap.utils').pick_process,
             cwd = "${workspaceFolder}",
+            protocol = "inspector",
         },
         {
             type = "pwa-chrome",
@@ -46,6 +73,8 @@ for _, language in ipairs(js_based_languages) do
 end
 
 
+
+
 vim.keymap.set('n', '<F5>', dap.continue)
 vim.keymap.set('n', '<F10>', dap.step_over)
 vim.keymap.set('n', '<F11>', dap.step_into)
@@ -53,13 +82,13 @@ vim.keymap.set('n', '<F12>', dap.step_out)
 vim.keymap.set('n', '<leader>l', dap.toggle_breakpoint)
 vim.keymap.set('n', '<leader>L', dap.set_breakpoint)
 
-require("mason-nvim-dap").setup({
-    handlers = {},
-    ensure_installed={
-        "codelldb",
-        "js-debug-adapter",
-        "javadbg"
-    },
-})
+--[[ require("mason-nvim-dap").setup({ ]]
+--[[     handlers = {}, ]]
+--[[     ensure_installed={ ]]
+--[[         "codelldb", ]]
+--[[         "js-debug-adapter", ]]
+--[[         "javadbg" ]]
+--[[     }, ]]
+--[[ }) ]]
 
 require("nvim-dap-virtual-text").setup()
