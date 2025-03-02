@@ -39,8 +39,8 @@ keymap('n', '<C-Left>', ':vertical resize -2<CR>', options)
 keymap('v', '<', '<gv', options)
 keymap('v', '>', '>gv', options)
 
-keymap('v', '<A-k>', ':m .-2<CR>==gv', options)
-keymap('v', '<A-j>', ':m .+1<CR>==gv', options)
+keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", options)
+keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", options)
 
 
 keymap('n', '<leader>w', function()
@@ -80,7 +80,6 @@ vim.keymap.set('n', '<leader>7', '<Cmd>BufferGoto 7<CR>', options)
 vim.keymap.set('n', '<leader>8', '<Cmd>BufferGoto 8<CR>', options)
 vim.keymap.set('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', options)
 vim.keymap.set('n', '<leader>0', '<Cmd>BufferLast<CR>', options)
--- Close buffer
 vim.keymap.set('n', '<leader>Q', '<Cmd>BufferClose<CR>', options)
 --[[ :BufferCloseAllButCurrent ]]
 --[[ :BufferCloseAllButPinned ]]

@@ -2,6 +2,9 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
+    completion = {
+      autocomplete = false
+    },
     mapping = {
         -- `Enter` key to confirm completion
         ['<CR>'] = cmp.mapping.confirm {
@@ -17,8 +20,8 @@ cmp.setup({
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
 
-        ['<C-n>'] = cmp_action.luasnip_supertab(),
-        ['<C-m>'] = cmp_action.luasnip_shift_supertab()
+        ['<C-j>'] = cmp_action.luasnip_supertab(),
+        ['<C-k>'] = cmp_action.luasnip_shift_supertab()
     },
     sources = {
         { name = "nvim_lua" },

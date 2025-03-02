@@ -56,7 +56,6 @@ return packer.startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'
-    use 'nvim-pack/nvim-spectre'
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
     use { 'nvim-telescope/telescope-ui-select.nvim' }
