@@ -52,6 +52,7 @@ alias lla="ls -la"
 alias dot="cd $HOME && cd .dotfiles/"
 alias dotn="cd $HOME && cd .dotfiles/ && nvim ."
 alias myhistory="history"
+alias postman="~/Downloads/Postman/Postman"
 
 export gopast="~/.scripts/gopast.sh"
 

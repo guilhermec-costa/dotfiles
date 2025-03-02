@@ -63,7 +63,7 @@ require('telescope').setup {
     },
 }
 require('telescope').load_extension "file_browser"
-require('telescope').load_extension('media_files')
+--[[ require('telescope').load_extension('media_files') ]]
 vim.api.nvim_set_keymap('n', '<leader>tb', '<Cmd>Telescope file_browser<CR>',
     { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>C', '<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>',

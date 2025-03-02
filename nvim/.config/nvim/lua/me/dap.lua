@@ -42,16 +42,6 @@ for _, language in ipairs(js_based_languages) do
             webRoot = "${workspaceFolder}",
             userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir"
         },
-        --[[ {
-            name = "Launch CPP executable",
-            type = "cpp",
-            request = "launch",
-            program = function()
-                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-            end,
-            cwd = '${workspaceFolder}',
-            args = {}
-        } ]]
     }
 end
 
@@ -66,6 +56,10 @@ vim.keymap.set('n', '<leader>L', dap.set_breakpoint)
 require("mason-nvim-dap").setup({
     handlers = {},
     ensure_installed={
-        "codelldb"
+        "codelldb",
+        "js-debug-adapter",
+        "javadbg"
     },
 })
+
+require("nvim-dap-virtual-text").setup()

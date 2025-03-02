@@ -30,6 +30,10 @@ require('mason-lspconfig').setup({
     },
 })
 
+require("lspconfig").clangd.setup {
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" }
+}
+
 vim.keymap.set({ 'n', 'i' }, '<A-k>', function()
     require('lsp_signature').toggle_float_win()
 end, { silent = true, noremap = true, desc = 'toggle signature' })

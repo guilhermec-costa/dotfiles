@@ -25,13 +25,12 @@ end
 return packer.startup(function(use)
     -- plugins
     use 'wbthomason/packer.nvim'
+    use "blazkowolf/gruber-darker.nvim"
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-fugitive'
+    use 'sainnhe/gruvbox-material'
     use 'ThePrimeagen/harpoon'
-    use 'owickstrom/vim-colors-paramount'
-    use 'rebelot/kanagawa.nvim'
     use 'rxi/json.lua'
-    use { "diegoulloao/neofusion.nvim" }
     use 'folke/tokyonight.nvim'
     use {
         "loctvl842/monokai-pro.nvim",
@@ -61,8 +60,9 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
     use { 'nvim-telescope/telescope-ui-select.nvim' }
-    use 'nvim-telescope/telescope-media-files.nvim'
+    --use 'nvim-telescope/telescope-media-files.nvim'
     use 'mfussenegger/nvim-dap'
+    use 'theHamsta/nvim-dap-virtual-text'
     use {
         "jay-babu/mason-nvim-dap.nvim",
     }
@@ -74,6 +74,8 @@ return packer.startup(function(use)
         run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
     }
 
+
+    use "rebelot/kanagawa.nvim"
     use 'windwp/nvim-ts-autotag'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'

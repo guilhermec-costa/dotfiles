@@ -3,11 +3,6 @@ local options = { noremap = true, silent = true }
 
 require('gitsigns').setup {
     signs = {
-        add = {
-            hl = "DiffAdd",
-            text = '│',
-            numhl = "GitSignsAddNr",
-        },
         change       = { text = '│' },
         delete       = { text = '_' },
         topdelete    = { text = '‾' },
@@ -47,5 +42,9 @@ require('gitsigns').setup {
         enable = false
     },
 }
+
+
+vim.api.nvim_set_hl(0, 'GitSignsAdd', { link = 'DiffAdd' })
+vim.api.nvim_set_hl(0, 'GitSignsAddNr', { link = 'GitSignsAddNr' })
 
 skm('n', '<leader>gb', ':Gitsigns blame_line<CR>', options)

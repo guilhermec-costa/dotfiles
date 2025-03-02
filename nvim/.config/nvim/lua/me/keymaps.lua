@@ -39,8 +39,9 @@ keymap('n', '<C-Left>', ':vertical resize -2<CR>', options)
 keymap('v', '<', '<gv', options)
 keymap('v', '>', '>gv', options)
 
-keymap('v', '<A-j>', ':m .+2<CR>==gv', options)
 keymap('v', '<A-k>', ':m .-2<CR>==gv', options)
+keymap('v', '<A-j>', ':m .+1<CR>==gv', options)
+
 
 keymap('n', '<leader>w', function()
     --[[ vim.lsp.buf.format() ]]

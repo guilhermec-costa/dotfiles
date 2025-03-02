@@ -1,4 +1,4 @@
---[[ local tracker = require("tracker")
+local tracker = require("tracker")
 tracker.setup {
     timer_delay = 3000,
     allow_notifications = true,
@@ -13,4 +13,4 @@ vim.keymap.set("n", "<leader>pd", "<cmd>Telescope tracker days<CR>", { noremap =
 vim.keymap.set("n", "<leader>ps", "<cmd>Telescope tracker sessions<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>pc", "<cmd>Telescope tracker commands<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>l", "<cmd>Telescope tracker logs<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>df", "<cmd>Telescope tracker dashboard_files<CR>", { noremap = true }) ]]
+vim.keymap.set("n", "<leader>df", "<cmd>Telescope tracker dashboard_files<CR>", { noremap = true })
