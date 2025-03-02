@@ -17,7 +17,7 @@ mods = "Control|Alt"
 
 [font]
 # normal.family = "Monaspace Radon SemiWide Semibold"
-normal.family = "Iosevka"
+normal.family = "Iosevka SemiBold"
 normal.style = "Regular"
 
 [font.bold]
