@@ -2,9 +2,10 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
-    completion = {
-      autocomplete = false
-    },
+  --[[   completion = { ]]
+  --[[     autocomplete = true ]]
+  --[[  ]]
+  --[[   }, ]]
     mapping = {
         -- `Enter` key to confirm completion
         ['<CR>'] = cmp.mapping.confirm {
