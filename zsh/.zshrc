@@ -1,6 +1,12 @@
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 
+# pyenv init config
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PATH:$HOME/.dotnet/tools"
+eval "$(pyenv init -)"
+
 # nvm path
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_
 CONFIG_HOME}/nvm")"
@@ -49,15 +55,15 @@ alias ....="cd ../../.."
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
-alias dot="cd $HOME && cd .dotfiles/"
 alias dotn="cd $HOME && cd .dotfiles/ && nvim ."
 alias myhistory="history"
 alias postman="~/Downloads/Postman/Postman"
-
-export gopast="~/.scripts/gopast.sh"
+alias spdcli="speedtest-cli"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # start theme
 eval "$(starship init zsh)"
+
+. "$HOME/.local/bin/env"

@@ -25,41 +25,19 @@ end
 return packer.startup(function(use)
     -- plugins
     use 'wbthomason/packer.nvim'
+    use 'kvrohit/rasmus.nvim'
     use "blazkowolf/gruber-darker.nvim"
+    use "EdenEast/nightfox.nvim"
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-fugitive'
     use 'sainnhe/gruvbox-material'
     use 'ThePrimeagen/harpoon'
     use 'rxi/json.lua'
-    use 'folke/tokyonight.nvim'
-    use {
-        "loctvl842/monokai-pro.nvim",
-        config = function()
-            require("monokai-pro").setup()
-        end
-    }
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        setup = function()
-            vim.g.mkdp_filetypes = {
-                "markdown" }
-        end,
-        ft = { "markdown" },
-    })
-    use {
-        '~/dev/nvim_plugins/Tracker.nvim',
-        requires = {
-            "rcarriga/nvim-notify"
-        }
-    }
     use 'NvChad/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'
-    use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
     use { 'nvim-telescope/telescope-ui-select.nvim' }
-    --use 'nvim-telescope/telescope-media-files.nvim'
     use 'mfussenegger/nvim-dap'
     use 'theHamsta/nvim-dap-virtual-text'
     use {
@@ -121,13 +99,13 @@ return packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    use {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup {}
-        end
-    }
+    --[[ use { ]]
+    --[[     "windwp/nvim-autopairs", ]]
+    --[[     event = "InsertEnter", ]]
+    --[[     config = function() ]]
+    --[[         require("nvim-autopairs").setup {} ]]
+    --[[     end ]]
+    --[[ } ]]
 
     use {
         'numToStr/Comment.nvim',

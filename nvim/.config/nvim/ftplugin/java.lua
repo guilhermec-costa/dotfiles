@@ -1,6 +1,6 @@
 local home = os.getenv('HOME')
 local mason_registry = require("mason-registry")
-local jdtls_path = mason_registry.get_package('jdtls'):get_install_path();
+local jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
 
 local bundles = {
     vim.fn.glob(

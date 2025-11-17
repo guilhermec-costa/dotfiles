@@ -1,7 +1,7 @@
 
  local cfg = {
  debug = false, -- set to true to enable debug logging
-  bind = true, -- This is mandatory, otherwise border config won't get registered.
+  bind = false, -- This is mandatory, otherwise border config won't get registered.
   doc_lines = 10, -- will show two lines of comment/doc(if there are more than two lines in doc, will be truncated);
   max_height = 16, -- max height of signature floating_window
   max_width = 100, -- max_width of signature floating_window, line will be wrapped if exceed max_width
@@ -19,7 +19,7 @@
 
   close_timeout = 4000, -- close floating window after ms when laster parameter is entered
   fix_pos = false,  -- set to true, the floating window will not auto-close until finish all parameters
-  hint_enable = true, -- virtual hint enable
+  hint_enable = false, -- virtual hint enable
   hint_prefix = "",  -- Panda for parameter, NOTE: for the terminal not support emoji, might crash
   hint_scheme = "String",
   hint_inline = function() return false end,  -- should the hint be inline(nvim 0.10 only)?  default false

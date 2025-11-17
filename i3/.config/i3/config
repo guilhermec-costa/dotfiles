@@ -202,8 +202,8 @@ bindsym Control+t exec --no-startup-id rofi -show drun
 bindsym Control+F5 exec --no-startup-id  flameshot gui
 
 # display resolutioactualn
-exec_always xrandr --output HDMI-1 --mode 1920x1080
-exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/universe.jpg
+exec_always xrandr --output DP-0 --mode 1920x1080 --rate 320
+exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/black-hole.jpg
 exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch.sh
 exec_always picom
 

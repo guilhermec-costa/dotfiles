@@ -1,29 +1,96 @@
-configuration{
-    modi: ["drun", "window", "run", "emoji", "calc"];
+configuration {
+    // Modos disponíveis
+    modi: "drun,window,run,emoji,calc,ssh,filebrowser";
+    
+    // Tema de ícones e exibição
     icon-theme: "Papirus-Dark";
     show-icons: true;
+    
+    // Configurações de aplicativos
     terminal: "alacritty";
     drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    sidebar-mode: false;
-    display-drun: " ";
-    display-run: " ";
-    display-window: " ";
+    window-format: "{w} {c} {t}";
     
-    //adding vim keybindings
+    // Layout e posicionamento
+    location: 0;
+    width: 50;
+    lines: 12;
+    columns: 1;
+    
+    // Histórico e comportamento
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: true;
+    
+    // Displays personalizados com ícones Nerd Font
+    display-drun: "  Apps";
+    display-run: "  Run";
+    display-window: " 﩯 Window";
+    display-emoji: " 󰞅 Emoji";
+    display-calc: "  Calc";
+    display-ssh: "  SSH";
+    display-filebrowser: "  Files";
+    
+    // Performance
+    lazy-grab: true;
+    drun-match-fields: "name,generic,exec,categories,keywords";
+    drun-show-actions: false;
+    
+    // Aceitação e cancelamento
+    kb-accept-entry: "Return,KP_Enter,Control+m";
+    
+    // Navegação de modos
+    kb-mode-next: "Control+Tab";
+    kb-mode-previous: "Control+Shift+Tab";
+    kb-mode-complete: "Control+o";
+    
+    // Edição de texto
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-remove-to-sol: "Control+u";
+    kb-remove-char-back: "BackSpace,Shift+BackSpace";
+    kb-remove-char-forward: "Delete";
+    kb-move-char-back: "Control+b";
+    kb-move-char-forward: "Control+f";
+    kb-move-word-back: "Alt+b,Control+Left";
+    kb-move-word-forward: "Alt+f,Control+Right";
+    kb-move-front: "Control+a";
+    kb-move-end: "Control+e";
+
     kb-row-up: "Up,Control+k";
     kb-row-left: "Left,Control+h";
     kb-row-right: "Right,Control+l";
     kb-row-down: "Down,Control+j";
-
-    kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
-
-    //fixing up
-    kb-remove-to-eol: "";
-    kb-move-char-back: "Control+b";
-    kb-remove-char-back: "BackSpace";
-    kb-move-char-forward: "Control+f";
-    kb-mode-complete: "Control+o";
+    
+    // Seleção
+    kb-select-1: "Super+1";
+    kb-select-2: "Super+2";
+    kb-select-3: "Super+3";
+    kb-select-4: "Super+4";
+    kb-select-5: "Super+5";
+    
+    // Páginas
+    kb-page-prev: "Page_Up";
+    kb-page-next: "Page_Down";
+    
+    // Limpeza e deleção
+    kb-clear-line: "Control+w";
+    kb-delete-entry: "Shift+Delete";
+    
+    // Screenshot de seleção
+    kb-screenshot: "Control+Shift+s";
+    
+    // Opções adicionais úteis
+    sort: true;
+    sorting-method: "fzf";
+    matching: "fuzzy";
+    case-sensitive: false;
+    cycle: true;
+    
+    // Timeout (desabilitar se não quiser auto-fechar)
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    }
 }
+
 @theme "~/.config/rofi/themes/tokyo-night.rasi"

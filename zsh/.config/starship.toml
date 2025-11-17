@@ -175,9 +175,6 @@ format = '\[[$symbol$workspace]($style)\]'
 [time]
 format = '\[[$time]($style)\]'
 
-[username]
-format = '\[[$user]($style)\]'
-
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
 
@@ -190,3 +187,11 @@ format = '\[[$symbol($version)]($style)\]'
 [solidity]
 format = '\[[$symbol($version)]($style)\]'
 
+[username]
+show_always = true
+format = "$user@"
+
+[hostname]
+ssh_only = false
+format = "$hostname "
+trim_at = "."
