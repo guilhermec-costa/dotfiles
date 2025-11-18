@@ -1,30 +1,24 @@
 * {
-    bg: #24283b;
-    hv: #9274ca; 
-    primary: #C5C8C6; 
-    ug: #0B2447;
+    bg: #011627;
+    hv: #1D3B53;
+    primary: #d6deeb;
+    ug: #ef5350;
     font: "FiraCode Nerd Font SemiBold 10";
     background-color: @bg;
-    //dark: @bg;
     border: 0px;
-    kl: #7aa2f7;
+    kl: #82aaff;
     black: #000000;
 
-    transparent: rgba(46,52,64,0);
+    transparent: rgba(1, 22, 39, 0);
 }
 
 window {
     width: 700;
-    /*since line wont work with height, i comment it out 
-    if you rather control the size via height
-    just comment it out */
-    //height: 500;
-
     orientation: horizontal;
     location: center;
     anchor: center;
     transparency: "screenshot";
-    border-color: @transparent;   
+    border-color: @transparent;
     border: 0px;
     border-radius: 6px;
     spacing: 0;
@@ -65,11 +59,10 @@ prompt {
 
 listview {
     layout: vertical;
-    //spacing: 5px;
     padding: 8px;
     lines: 7;
     columns: 2;
-    border: 0px 3px 3px 3px; 
+    border: 0px 3px 3px 3px;
     border-radius: 0px 0px 6px 6px;
     border-color: @primary;
     dynamic: false;
@@ -105,7 +98,7 @@ element-icon {
 }
 
 element normal urgent {
-    background-color: @primary;
+    background-color: @ug;
 }
 
 element selected active {
