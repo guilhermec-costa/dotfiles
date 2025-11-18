@@ -1,5 +1,4 @@
 // Place your key bindings in this file to override the defaults
-// Place your key bindings in this file to override the defaults
 [
     {
         "key": "Alt+k",
@@ -169,7 +168,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "shift+r",
+        "key": "shift+r", 
         "command": "workbench.action.terminal.fontZoomReset",
         "when": "terminalFocus"
     }
