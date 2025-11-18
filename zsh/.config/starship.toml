@@ -1,3 +1,62 @@
+[palettes.night_owl]
+bg        = "#011627"
+fg        = "#d6deeb"
+blue      = "#82aaff"
+cyan      = "#7fdbca"
+purple    = "#c792ea"
+red       = "#ef5350"
+yellow    = "#ffcb6b"
+green     = "#22da6e"
+comment   = "#5f7e97"
+warning   = "#ffeb95"
+
+palette = "night_owl"
+
+[username]
+show_always = true
+style_user = "fg"
+style_root = "red"
+format = "[$user]($style)@"
+
+[hostname]
+ssh_only = false
+trim_at = "."
+format = "[$hostname]($style) "
+style = "cyan"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "blue"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+read_only_style = "red"
+truncation_symbol = "../"
+
+[git_branch]
+symbol = " "
+style = "purple"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold red"
+conflicted = "🏳 "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "?${count} "
+stashed = "📦 "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+
+[character]
+success_symbol = "[❯](blue)"
+error_symbol   = "[❯](red)"
+vicmd_symbol   = "[❮](purple)"
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
@@ -54,12 +113,6 @@ format = '\[[$symbol$branch]($style)\]'
 
 [gcloud]
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
-
-[git_branch]
-format = '\[[$symbol$branch]($style)\]'
-
-[git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
@@ -122,7 +175,9 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$cloud(\($project\))]($style)\]'
 
 [os]
-format = '\[[$symbol]($style)\]'
+format = '[$symbol]($style) '
+style = "bold white"
+disabled = true 
 
 [package]
 format = '\[[$symbol$version]($style)\]'
@@ -173,7 +228,10 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
-format = '\[[$time]($style)\]'
+format = '[$time]($style) '
+style = "bold white"
+disabled = true 
+time_format = "%T"
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
@@ -186,12 +244,3 @@ format = '\[[$symbol($version)]($style)\]'
 
 [solidity]
 format = '\[[$symbol($version)]($style)\]'
-
-[username]
-show_always = true
-format = "$user@"
-
-[hostname]
-ssh_only = false
-format = "$hostname "
-trim_at = "."
