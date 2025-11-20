@@ -28,7 +28,6 @@ bindsym $mod+Return exec alacritty
 
 # Rofi launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym Control+t exec --no-startup-id rofi -show drun
 
 # Rofi window switcher
 bindsym $mod+Tab exec --no-startup-id rofi -show window
@@ -312,7 +311,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id xwallpaper --zoom ~/.dotfiles/wallpaper/.config/moon.jpg
 
 # Resolução do display
-exec_always --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 320
+exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 320
 
 exec_always --no-startup-id sxhkd
 

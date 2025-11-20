@@ -3,9 +3,13 @@
   "editor.detectIndentation": false,
   "editor.mouseWheelZoom": true,
   "window.titleBarStyle": "custom",
+  "window.customMenuBarAltFocus": false,
+  "terminal.integrated.altClickMovesCursor": false,
+  "window.enableMenuBarMnemonics": false,
   "window.zoomLevel": 0,
   "keyboard.dispatch": "keyCode",
   "explorer.confirmDelete": false,
+  "workbench.editor.enablePreview": false,
   "vim.cursorStylePerMode.insert": "block",
   "vim.cursorStylePerMode.normal": "block",
   "vim.statusBarColorControl": false,
@@ -14,6 +18,8 @@
   "vim.cursorStylePerMode.visual": "line-thin",
   "vim.cursorStylePerMode.visualblock": "line-thin",
   "vim.cursorStylePerMode.visualline": "block",
+  "search.quickOpen.includeHistory": false,
+  "search.quickOpen.includeSymbols": false,
   "editor.minimap.enabled": false,
   "vim.hlsearch": true,
   "zenMode.hideStatusBar": false,
@@ -23,6 +29,8 @@
   "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
   "vim.highlightedyank.duration": 50,
   "editor.lineNumbers": "relative",
+  "workbench.tree.indent": 16,
+  "terminal.integrated.cursorBlinking": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<C-k>"], "after": ["<C-w>", "k"] },
     { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
@@ -30,8 +38,11 @@
     { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
-    { "before": ["<leader>", "c", "c"],
+    { "before": ["<leader>", "c", "s"],
       "commands": ["workbench.action.selectTheme"]
+    },
+    { "before": ["<leader>", "g", "b"],
+      "commands": ["gitblame.gitShow"]
     },
     {
       "before": ["<leader>", "d", "p"],
@@ -149,8 +160,28 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
+      "before": ["<leader>", "d", "d"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "o", "i"],
+      "commands": ["editor.action.organizeImports"]
+    },
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "f", "b"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
       "before": ["<leader>", "f", "s"],
-      "commands": ["workbench.action.focusSideBar"]
+      "commands": ["workbench.action.gotoSymbol"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -164,21 +195,55 @@
     { "before": ["<C-j>"], "commands": ["selectNextSuggestion"] },
     { "before": ["<C-k>"], "commands": ["selectPrevSuggestion"] },
   ],
-  "editor.fontFamily": "Iosevka Fixed, Fira Code, Cascadia Mono, Consolas, 'Courier New', monospace, JetBrains Mono NL SemiBold",
+  "editor.fontFamily": "Iosevka Fixed, Fira Code Regular, Cascadia Mono, Consolas, 'Courier New', monospace, JetBrains Mono NL SemiBold",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400",
   "terminal.integrated.fontFamily": "JetBrains Mono NL SemiBold",
   "C_Cpp.default.cppStandard": "gnu++17",
   "workbench.preferredDarkColorTheme": "Default Dark+",
   "security.workspace.trust.untrustedFiles": "open",
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true,
+    "**/.venv/**": true,
+    "**/__pycache__/**": true,
+    "**/*.pyc": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.next/**": true,
+    "**/coverage/**": true,
+    "**/logs/**": true,
+    "**/*.gz": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true
+  },
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
   },
-  "editor.fontLigatures": true,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
 "javascript.validate.enable": true,
   "window.customTitleBarVisibility": "auto",
@@ -200,10 +265,10 @@
     "*.js": "javascript"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
 },
 "window.menuBarVisibility": "compact",
 "window.commandCenter": false,
@@ -226,7 +291,8 @@
 "C_Cpp.intelliSenseEngine": "disabled",
 "javascript.updateImportsOnFileMove.enabled": "always",
 "[json]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "biomejs.biome"
 },
-"workbench.colorTheme": "Night Owl (No Italics)"
+"workbench.colorTheme": "Night Owl (No Italics)",
+"editor.defaultFormatter": "biomejs.biome"
 }

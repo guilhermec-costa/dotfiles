@@ -171,5 +171,30 @@
         "key": "shift+r", 
         "command": "workbench.action.terminal.fontZoomReset",
         "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+alt+n",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+alt+s",
+      "command": "workbench.action.terminal.split",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+alt+j",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+alt+k",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus"
     }
 ]
