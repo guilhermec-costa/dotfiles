@@ -196,5 +196,20 @@
       "key": "ctrl+k",
       "command": "workbench.action.terminal.kill",
       "when": "terminalFocus"
+    },
+    {
+      "key": "enter",
+      "command": "editor.action.goToDeclaration",
+      "when": "inReferenceSearchEditor"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "selectNextCodeAction",
+      "when": "codeActionMenuVisible"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "selectPrevCodeAction",
+      "when": "codeActionMenuVisible"
     }
 ]

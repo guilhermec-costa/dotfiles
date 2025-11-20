@@ -262,6 +262,9 @@ bindsym $mod+Shift+minus move scratchpad
 # Mostrar/esconder scratchpad
 bindsym $mod+minus scratchpad show
 
+# Rofi Power Menu
+# bindsym $mod+Shift+p ~/.dotfiles/rofi/.config/rofi/scripts/rofi-power-menu
+
 # ============================================
 # MOUSE
 # ============================================
@@ -290,6 +293,7 @@ focus_follows_mouse no
 # ============================================
 
 assign [class="Google-chrome"] $ws2
+assign [class="discord"] $ws3
 
 # ============================================
 # AUTOSTART

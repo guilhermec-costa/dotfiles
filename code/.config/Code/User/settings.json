@@ -182,6 +182,14 @@
     {
       "before": ["<leader>", "f", "s"],
       "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.scm"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [

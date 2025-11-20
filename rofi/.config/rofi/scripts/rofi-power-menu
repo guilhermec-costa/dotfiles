@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+options="⏻ Shutdown\n🔄 Reboot\n💤 Suspend\n🔐 Lock"
+
+choice=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu")
+
+case "$choice" in
+    "⏻ Shutdown") systemctl poweroff ;;
+    "🔄 Reboot") systemctl reboot ;;
+    "💤 Suspend") systemctl suspend ;;
+    "🔐 Lock") i3lock -c 000000 ;;
+    "🚪 Logout") i3-msg exit ;;
+esac
