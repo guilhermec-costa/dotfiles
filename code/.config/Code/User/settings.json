@@ -25,6 +25,7 @@
   "zenMode.hideStatusBar": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.centerLayout": false,
+  "zenMode.fullScreen": false,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
   "vim.highlightedyank.duration": 50,
@@ -190,18 +191,23 @@
     {
       "before": ["<leader>", "g", "s"],
       "commands": ["workbench.view.scm"]
-    }
+    },
+    { "before": ["<leader>", "M"],
+    "commands": [":marks"],
+  }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["<C-k>"], "commands": ["editor.action.moveLinesUpAction"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     { "before": [">"], "commands": ["editor.action.indentLines"] },
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "commands": ["selectNextSuggestion"] },
     { "before": ["<C-k>"], "commands": ["selectPrevSuggestion"] },
+    { "before": ["j", "j"], "after": ["<Esc>"] },
+    { "before": ["<CapsLock>"], "after": ["<Esc>"] }
   ],
   "editor.fontFamily": "Iosevka Fixed, Fira Code Regular, Cascadia Mono, Consolas, 'Courier New', monospace, JetBrains Mono NL SemiBold",
   "editor.fontSize": 14,
@@ -299,7 +305,7 @@
 "C_Cpp.intelliSenseEngine": "disabled",
 "javascript.updateImportsOnFileMove.enabled": "always",
 "[json]": {
-  "editor.defaultFormatter": "biomejs.biome"
+      "editor.defaultFormatter": "biomejs.biome"
 },
 "workbench.colorTheme": "Night Owl (No Italics)",
 "editor.defaultFormatter": "biomejs.biome"
