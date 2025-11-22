@@ -195,6 +195,10 @@
     { 
       "before": ["<leader>", "M"],
       "commands": [":marks"],
+    },
+    {
+      "before": ["<leader>", "l", "s"],
+      "commands": ["git.stashView"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
