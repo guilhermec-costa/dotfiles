@@ -192,9 +192,10 @@
       "before": ["<leader>", "g", "s"],
       "commands": ["workbench.view.scm"]
     },
-    { "before": ["<leader>", "M"],
-    "commands": [":marks"],
-  }
+    { 
+      "before": ["<leader>", "M"],
+      "commands": [":marks"],
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "commands": ["editor.action.moveLinesDownAction"] },
