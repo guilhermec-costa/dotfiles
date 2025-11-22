@@ -199,6 +199,18 @@
     {
       "before": ["<leader>", "l", "s"],
       "commands": ["git.stashView"]
+    },
+    {
+      "before": ["<leader>", "="],
+      "commands": ["editor.action.fontZoomIn"]
+    },
+    {
+      "before": ["<leader>", "-"],
+      "commands": ["editor.action.fontZoomOut"]
+    },
+    {
+      "before": ["<leader>", "0"],
+      "commands": ["workbench.action.zoomReset"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -224,7 +236,6 @@
   "security.workspace.trust.untrustedFiles": "open",
   "files.exclude": {
     "**/node_modules": true,
-    "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
@@ -233,7 +244,6 @@
   },
   "files.watcherExclude": {
     "**/node_modules/**": true,
-    "**/.git/**": true,
     "**/.venv/**": true,
     "**/__pycache__/**": true,
     "**/*.pyc": true,
@@ -246,7 +256,6 @@
   },
   "search.exclude": {
     "**/node_modules": true,
-    "**/.git": true,
     "**/.venv": true,
     "**/__pycache__": true,
     "**/dist": true,
@@ -313,6 +322,5 @@
       "editor.defaultFormatter": "biomejs.biome"
 },
 "workbench.colorTheme": "Night Owl (No Italics)",
-"editor.defaultFormatter": "biomejs.biome",
-"terminal.integrated.fontSize": 22
+"editor.defaultFormatter": "biomejs.biome"
 }

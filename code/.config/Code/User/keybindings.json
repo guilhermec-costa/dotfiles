@@ -192,11 +192,6 @@
       "command": "workbench.action.terminal.focusPrevious",
       "when": "terminalFocus"
     },
-    { 
-      "key": "ctrl+alt+l",
-      "command": "workbench.action.terminal.clear",
-      "when": "terminalFocus"
-    },
     {
       "key": "ctrl+k",
       "command": "workbench.action.terminal.kill",

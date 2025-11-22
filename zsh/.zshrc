@@ -68,5 +68,3 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 
 . "$HOME/.local/bin/env"
-
-bindkey '^l' autosuggest-accept
