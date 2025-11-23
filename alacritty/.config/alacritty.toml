@@ -16,6 +16,16 @@ key = "v"
 action = "ToggleViMode"
 mods = "Control|Alt"
 
+[[keyboard.bindings]]
+key = "P"
+mods = "Command"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "Y"
+mods = "Command"
+action = "Copy"
+
 [font]
 normal.family = "Iosevka"
 normal.style = "Regular"
