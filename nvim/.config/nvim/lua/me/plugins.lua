@@ -25,6 +25,7 @@ end
 return packer.startup(function(use)
     -- plugins
     use 'wbthomason/packer.nvim'
+    use 'oxfist/night-owl.nvim'
     use 'kvrohit/rasmus.nvim'
     use "blazkowolf/gruber-darker.nvim"
     use "EdenEast/nightfox.nvim"

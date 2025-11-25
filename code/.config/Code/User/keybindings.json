@@ -120,10 +120,10 @@
         "key": "ctrl+shift+5",
         "command": "editor.emmet.action.matchTag"
     },
-    // {
-    //   "key": "ctrl+z",
-    //   "command": "workbench.action.toggleZenMode"
-    // },
+    {
+      "key": "ctrl+z",
+      "command": "workbench.action.toggleZenMode"
+    },
     //Disabled
     {
         "key": "ctrl+n",

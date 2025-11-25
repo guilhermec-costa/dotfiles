@@ -322,5 +322,6 @@
       "editor.defaultFormatter": "biomejs.biome"
 },
 "workbench.colorTheme": "Night Owl (No Italics)",
-"editor.defaultFormatter": "biomejs.biome"
+"editor.defaultFormatter": "biomejs.biome",
+"debug.disassemblyView.showSourceCode": false
 }
