@@ -211,6 +211,10 @@
     {
       "before": ["<leader>", "0"],
       "commands": ["workbench.action.zoomReset"]
+    },
+    {
+      "before": ["<leader>", "t", "b"],
+      "commands": ["workbench.action.tasks.build"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -247,8 +251,8 @@
     "**/.venv/**": true,
     "**/__pycache__/**": true,
     "**/*.pyc": true,
-    "**/dist/**": true,
-    "**/build/**": true,
+    // "**/dist/**": true,
+    // "**/build/**": true,
     "**/.next/**": true,
     "**/coverage/**": true,
     "**/logs/**": true,
@@ -258,8 +262,8 @@
     "**/node_modules": true,
     "**/.venv": true,
     "**/__pycache__": true,
-    "**/dist": true,
-    "**/build": true,
+    // "**/dist": true,
+    // "**/build": true,
     "**/.next": true,
     "**/coverage": true
   },
@@ -321,7 +325,8 @@
 "[json]": {
       "editor.defaultFormatter": "biomejs.biome"
 },
-"workbench.colorTheme": "Night Owl (No Italics)",
+"workbench.colorTheme": "Tokyo Night",
 "editor.defaultFormatter": "biomejs.biome",
-"debug.disassemblyView.showSourceCode": false
+"debug.disassemblyView.showSourceCode": false,
+"codeTelescope.finder.maxResults": 50000
 }

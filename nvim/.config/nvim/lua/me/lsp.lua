@@ -5,7 +5,7 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
 end)
 
-require('lspconfig').lua_ls.setup {
+vim.lsp.config.lua_ls = {
     settings = {
         Lua = {
             workspace = {
@@ -30,7 +30,7 @@ require('mason-lspconfig').setup({
     },
 })
 
-require("lspconfig").clangd.setup {
+vim.lsp.config.clangd = {
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" }
 }
 
