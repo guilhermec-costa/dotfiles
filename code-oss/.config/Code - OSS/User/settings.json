@@ -215,23 +215,7 @@
     {
       "before": ["<leader>", "t", "b"],
       "commands": ["workbench.action.tasks.build"]
-    },
-    {
-      "before": ["<leader>", "B"],
-      "commands": ["editor.debug.action.toggleBreakpoint"]
-    },
-    {
-      "before": ["<leader>", "r", "t"],
-      "commands": ["testing.runAtCursor"]
-    },
-    {
-      "before": ["<leader>", "d", "t"],
-      "commands": ["testing.debugAtCursor"]
-    },
-    {
-      "before": ["<leader>", "r", "T"],
-      "commands": ["testing.runCurrentFile"]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "commands": ["editor.action.moveLinesDownAction"] },
@@ -246,7 +230,7 @@
     { "before": ["j", "j"], "after": ["<Esc>"] },
     { "before": ["<CapsLock>"], "after": ["<Esc>"] }
   ],
-  "editor.fontFamily": "Iosevka Fixed, Fira Code Retina, Cascadia Mono, Consolas, 'Courier New', monospace, JetBrains Mono NL SemiBold",
+  "editor.fontFamily": "Iosevka Fixed, Fira Code, Cascadia Mono, Consolas, 'Courier New', monospace, JetBrains Mono NL SemiBold",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.fontWeight": "400",
@@ -255,7 +239,7 @@
   "workbench.preferredDarkColorTheme": "Default Dark+",
   "security.workspace.trust.untrustedFiles": "open",
   "files.exclude": {
-    // "**/node_modules": true,
+    "**/node_modules": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
@@ -263,7 +247,7 @@
     "**/Thumbs.db": true
   },
   "files.watcherExclude": {
-    // "**/node_modules/**": true,
+    "**/node_modules/**": true,
     "**/.venv/**": true,
     "**/__pycache__/**": true,
     "**/*.pyc": true,
@@ -275,7 +259,7 @@
     "**/*.gz": true
   },
   "search.exclude": {
-    // "**/node_modules": true,
+    "**/node_modules": true,
     "**/.venv": true,
     "**/__pycache__": true,
     // "**/dist": true,
@@ -313,7 +297,7 @@
     "*.js": "javascript"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -343,50 +327,6 @@
 },
 "editor.defaultFormatter": "biomejs.biome",
 "debug.disassemblyView.showSourceCode": false,
-"workbench.editor.empty.hint": "hidden",
-"terminal.integrated.suggest.enabled": false,
-"codeTelescope.preview.verticalScrollFraction": "1/4",
-"codeTelescope.preview.horizontalScrollFraction": "1/4",
-"[css]": {
-  "editor.defaultFormatter": "vscode.css-language-features"
-},
-"[html]": {
-  "editor.defaultFormatter": "vscode.html-language-features"
-},
-"codeTelescope.wsFileFinder.maxResults": 20000,
-"codeTelescope.wsFileFinder.excludePatterns": [
-  "**/node_modules/**",
-  "**/dist/**",
-  "**/build/**",
-  "**/out/**",
-  "**/.git/**",
-  "**/.svn/**",
-  "**/.hg/**",
-  "**/.next/**",
-  "**/.turbo/**",
-  "**/.cache/**",
-  "**/.parcel-cache/**",
-  "**/.vite/**",
-  "**/.nuxt/**",
-  "**/coverage/**"
-],
-"codeTelescope.keybindings": {
-  "moveDown": "ctrl+j",
-  "moveUp": "ctrl+k",
-  "confirm": "enter",
-  "close": "escape",
-  "scrollUp": "ctrl+u",
-  "scrollDown": "ctrl+d",
-  "scrollLeft": "ctrl+h",
-  "scrollRight": "ctrl+l"
-},
-"workbench.colorTheme": "Rosé Pine (no italics)",
-"codeTelescope.layout.panelContainerPct": 100,
-"codeTelescope.layout.resultsFontSize": 15,
-"codeTelescope.layout.previewFontSize": 15,
-"codeTelescope.layout.leftSideWidthPct": 60,
-"codeTelescope.layout.rightSideWidthPct": 40,
-"terminal.integrated.fontSize": 15,
-"codeTelescope.layout.borderSizeInPx": 1.5,
-"codeTelescope.preview.showLineNumbers": true
+"codeTelescope.finder.maxResults": 50000,
+"workbench.colorTheme": "Tokyo Night"
 }

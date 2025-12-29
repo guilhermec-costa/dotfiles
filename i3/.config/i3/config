@@ -312,7 +312,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Wallpaper
-exec_always --no-startup-id xwallpaper --zoom ~/.dotfiles/wallpaper/.config/moon.jpg
+exec_always --no-startup-id xwallpaper --zoom ~/.dotfiles/wallpaper/.config/itachi.jpg
 
 # Resolução do display
 exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 320
